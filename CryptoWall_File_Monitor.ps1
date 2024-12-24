@@ -2,7 +2,7 @@
 <#
 
 .NOTES
-  Version:        4.0
+  Version:        4.1
   Author:         edk
   Creation Date:  22/12/2024
   Purpose/Change:   auto update Crypto extensions from: "https://raw.githubusercontent.com/Allegronet/FSRM/refs/heads/main/fsrm-block-lost.txt" on running
@@ -51,7 +51,7 @@ New-FsrmFileScreenTemplate -Name "CryptoWall File Monitor" -IncludeGroup "Crypto
 try {
 
 mkdir C:\TaskScripts
-C:\TaskLogs
+mkdir C:\TaskLogs
 
 }
 catch{}
