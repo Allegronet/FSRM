@@ -32,11 +32,11 @@ $fsrmGroupName = "CryptoWall File Monitor"
 $patternFileUrl = "https://raw.githubusercontent.com/Allegronet/FSRM/main/fsrm-block-lost.txt"
 $noc_mail = "noc@allegronet.co.il"
 
- $response = Invoke-WebRequest -Uri $patternFileUrl -UseBasicParsing
+ $response = Invoke-WebRequest -Uri $patternFileUrl -UseBasicParsing 
 
- #$patterns = $response.Content -split "`r?`n" | Where-Object { $_ -ne "" }
+ $patterns = $response.Content -split "`r?`n" | Where-Object { $_ -ne "" }
 
-New-FsrmFileGroup -Name $fsrmGroupName -IncludePattern $response.Content
+New-FsrmFileGroup -Name $fsrmGroupName -IncludePattern $patterns
 
 
 Set-FsrmSetting -SmtpServer "smtp.allegronet.co.il" -AdminEmailAddress $noc_mail
