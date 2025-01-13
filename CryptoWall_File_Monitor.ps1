@@ -26,7 +26,7 @@
 #>
 
 #---------------------------------------------------------[Initialisations]--------------------------------------------------------
-
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $fsrmGroupName = "CryptoWall File Monitor"
 $patternFileUrl = "https://raw.githubusercontent.com/Allegronet/FSRM/main/fsrm-block-lost.txt"
